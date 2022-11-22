@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first page</title>
+    <style>
+        #img1 {
+            width: 100%;
+            position: absolute;
+        }
+
+        #img2 {
+            border-radius: 8%;
+            height: 325px;
+            transform: rotate(-55deg) skew(20deg, 20deg);
+            position: relative;
+            top: 280px;
+            left: 140px;
+        }
+
+    </style>
+
+</head>
+<body>
+<img src="首页.jpg" alt="" id="img1">
+<img src="进入动画春.jpg" alt="" id="img2">
+</body>
+
+</html>
+<script type="text/javascript">
+    let count = 0;
+    const arr = ['进入动画春.jpg', '进入动画夏.jpg', '进入动画秋.jpg', '进入动画冬.jpg'];
+    document.getElementById("img1").onclick = function () {
+        document.getElementById("img2").src = arr[count++];
+    }
